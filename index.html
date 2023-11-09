@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Scripts -->
+        <script>
+            function display() {
+                const data = parseInt(document.getElementById("input").value);
+                if (!isNaN(data)) {
+                    document.getElementById("printHere").innerHTML = Math.floor(Math.random() * data);
+                }
+                else {
+                    document.getElementById("printHere").innerHTML = "Please enter a number"
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+    <div class="mx-auto" style="width: 50%">
+        <div class="form-label mt-2">Upper Limit: </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Upper Limit" aria-label="" aria-describedby="basic-addon1" id="input">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" onclick="display()">Generate Random Number</button>
+            </div>
+        </div>
+        <div class="h1" id="printHere" style="text-align: center"></div>
+    </div>
+    </body>
+</html>
